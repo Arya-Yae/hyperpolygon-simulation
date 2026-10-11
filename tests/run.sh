@@ -18,4 +18,3 @@ node stratum.mjs
 node star.mjs
 node cycle.mjs
 node orient.mjs
-node validate.mjs

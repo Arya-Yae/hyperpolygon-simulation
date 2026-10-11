@@ -31,9 +31,6 @@ checked from every angle:
 - `orient.mjs` — orientation servo (6 tests, ~39 slider paths): chord
   pinning, drag continuity vs a Kabsch baseline, jump smoothness, static
   stability, servo path-independence, quaternion sanity.
-- `validate.mjs` — spot-checks against the 137 MB Mathematica reference
-  `mathematica/hyperpolygonDataPolar`. That file is neither present nor
-  committed; when it is absent the battery prints `SKIP` and exits 0.
 
 ## Running
 
