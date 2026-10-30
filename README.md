@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/img/hyperpolygon-logo.svg" alt="Hyperpolygon logo" width="96">
+<img src="assets/img/hyperpolygon-logo.svg?v=3e60c0cf3b2a" alt="Hyperpolygon logo" width="96">
 
 # Hyperpolygon Moduli Spaces
 

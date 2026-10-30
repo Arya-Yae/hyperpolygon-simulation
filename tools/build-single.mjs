@@ -178,7 +178,11 @@ function escapeForScript(js) {
 // Replace exactly one occurrence, failing loudly if index.html drifted so
 // the generated bundle can never silently reference a missing asset.
 function replaceOnce(text, find, repl, label) {
-  const i = text.indexOf(find);
+  if (find instanceof RegExp) {
+    const match = text.match(find);
+    find = match ? match[0] : "";
+  }
+  const i = find ? text.indexOf(find) : -1;
   if (i === -1) {
     throw new Error(
       "build-single: could not find " +
@@ -216,13 +220,13 @@ function build() {
 
   html = replaceOnce(
     html,
-    'href="assets/img/hyperpolygon-logo.svg"',
+    /href="assets\/img\/hyperpolygon-logo\.svg(?:\?v=[a-f0-9]+)?"/,
     'href="' + logoURI + '"',
     "logo <link> icon"
   );
   html = replaceOnce(
     html,
-    'src="assets/img/hyperpolygon-logo.svg"',
+    /src="assets\/img\/hyperpolygon-logo\.svg(?:\?v=[a-f0-9]+)?"/,
     'src="' + logoURI + '"',
     "hero <img> logo"
   );
