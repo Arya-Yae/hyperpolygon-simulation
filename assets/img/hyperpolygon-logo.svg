@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Hyperpolygon moduli spaces logo: telescoping quadrilateral">
   <defs>
     <filter id="green-glow" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="5"/>
+      <feGaussianBlur stdDeviation="8"/>
     </filter>
     <filter id="green-halo" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="1.5"/>
+      <feGaussianBlur stdDeviation="3"/>
     </filter>
   </defs>
   <style>
@@ -21,14 +21,14 @@
   </g>
 
   <!-- green telescoping segments: one quarter of each edge, each reaching a corner -->
-  <g stroke="#34c06e" stroke-width="18" stroke-linecap="round" fill="none">
-    <g filter="url(#green-glow)" opacity=".35">
+  <g stroke="#53e58f" stroke-width="18" stroke-linecap="round" fill="none">
+    <g filter="url(#green-glow)" opacity=".65">
       <line x1="400" y1="208" x2="448" y2="256"/>
       <line x1="304" y1="400" x2="256" y2="448"/>
       <line x1="112" y1="304" x2="64"  y2="256"/>
       <line x1="208" y1="112" x2="256" y2="64"/>
     </g>
-    <g filter="url(#green-halo)" opacity=".3">
+    <g filter="url(#green-halo)" opacity=".55">
       <line x1="400" y1="208" x2="448" y2="256"/>
       <line x1="304" y1="400" x2="256" y2="448"/>
       <line x1="112" y1="304" x2="64"  y2="256"/>
