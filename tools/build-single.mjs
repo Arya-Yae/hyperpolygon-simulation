@@ -19,8 +19,9 @@
 
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
-const HERE = path.dirname(new URL(import.meta.url).pathname);
+const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, ".."); // hyperpolygon-standalone/
 const SRC = path.join(ROOT, "assets", "js", "hyperpolygon");
 const OUT = path.join(ROOT, "hyperpolygon.html");
